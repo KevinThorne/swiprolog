@@ -1,0 +1,15 @@
+%Exercises 1.2
+%
+%
+%Exercise 1.2.1
+% Includes 1 fact, 1 rule, 1 clause, 1-place predicate, predicate
+% w/arity:2
+
+
+thorne(kevin).
+name(kevin, thorne).
+
+in_thorne_family(X) :- in_thornejohnson_family(X).
+in_thornejohnson_family(kevin).
+
+

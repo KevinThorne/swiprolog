@@ -1,0 +1,36 @@
+% library(win_menu) compiled into win_menu 0.01 sec, 11,412 bytes
+% library(swi_hooks) compiled into pce_swi_hooks 0.00 sec, 2,232 bytes
+% c:/documents and settings/kevint/application data/swi-prolog/pl.ini compiled 0.00 sec, 416 bytes
+Welcome to SWI-Prolog (Multi-threaded, 32 bits, Version 5.10.5)
+Copyright (c) 1990-2011 University of Amsterdam, VU Amsterdam
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software,
+and you are welcome to redistribute it under certain conditions.
+Please visit http://www.swi-prolog.org for details.
+
+For help, use ?- help(Topic). or ?- apropos(Word).
+
+1 ?- [geo.pro].
+ERROR: Syntax error: Operator expected
+ERROR: [geo
+ERROR: ** here **
+ERROR: .pro] . 
+1 ?- [geo]
+|    .
+ERROR: source_sink `geo' does not exist
+true.
+
+2 ?- 
+% c:/Documents and Settings/kevint/My Documents/Prolog/school/geo.pro compiled 0.00 sec, 1,296 bytes
+2 ?- located_in(austin,texas).
+true
+
+3 ?- located_in(what, texas).
+false.
+
+4 ?- located_in(atlanta, what).
+false.
+
+5 ?- located_in(texas, usa).
+false.
+
+6 ?- Probably because in the code it has located_in(X, usa):- located_in(X,texas). and not located_in(X, usa):- located_in(States/texas). or i didnt specify located_in(X, north_america),

@@ -1,0 +1,95 @@
+%Exercises of Chapter 1
+%
+%
+%Exercise 1.2.1
+% Includes 1 fact, 1 rule, 1 clause, 1-place predicate, predicate
+% w/arity:2
+
+
+thorne(kevin). /*yes, kevin is a thorne*/
+name(kevin, thorne). /*my name specifying name(first name, lastname)*/
+
+in_thorne_family(X) :- in_thornejohnson_family(X). /*Going from my entire family
+to just my immediate family*/
+in_thornejohnson_family(kevin). /*My immediate family specifying me*/
+
+
+%Exercise 1.2.2
+% Includes "fact that represents "in" as a relation between Atlanta and
+% Georgia
+
+state(georgia).
+city(atlanta, georgia).
+
+%Exercise 1.2.3
+% Includes representing latitude 34 north and longitude 84 west as the
+% location of Atlanta
+
+longitude(west,east). /*Setting the definition of longitude and latitude*/
+latitude(north,south). /*with this setup, we can actually say North 34, West 84*/
+atlanta_location(latitude/1, 34, longitude/1, 84).
+
+%Exercise 1.4.* is located in geo.pro
+%and in the text file
+%
+
+
+
+%Exercise 1.5.1
+% I dont think anything would happen, it would just be a simple variable
+% change because X,Y,or Z are all the located_in(X y or z, state).
+
+%Exercise 1.5.2
+/* 6 ?- located_in(austin,X).
+Correct to: "located_in(austin,X)"?
+Please answer 'y' or 'n'? yes
+X = texas .
+
+7 ?- write(X).
+_G574  <- practicly saying NOT texas
+true.*/
+
+
+%Excerise 1.6.1
+%in exercise161.doc
+
+%Exercise 1.6.2
+% located_in(atlanta,usa). would be faster then located_in(austin,usa).
+% only because the located_in(X,georgia). clause is first
+
+%Exercise 1.6.3
+% Prediction: it should come up with x = georgia or x = texas because
+% those are the 2 that are with "usa" in the clause
+%
+% Outcome:  8 ?- located_in(X,usa). X = atlanta .
+
+
+
+%Exercise 1.7.1
+% asdfasdf = atom  234 = number  f(a,b) = structure  _on = variable
+% X(y,z) = not valid  in_out_ = variable  'X'(XX) = structure
+% 'X' = atom
+
+%Exercise 1.7.2
+% located_in (at lanta,georgia).
+% Errors in the above include you cannot break up an atom and you cannot
+% put anything between a functor and the open parenthesis
+
+
+%Exercise 1.7.3
+% The version of Prolog that we are using do not notify the spacing
+% between the clauses for the predicate.
+
+
+%Exercise 1.8.1
+%Diagram is in 181exercise.doc
+%
+%Exercise 1.8.2
+%in thornefamily.pro
+
+%Exercise 1.9.1
+% I have modified family.pro so it will find grandparents, so i put it
+% into the program and worked because i made it figure the grandfather
+% of michael and it returned charles which is true.
+
+%
